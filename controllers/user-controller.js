@@ -48,7 +48,7 @@ module.exports = {
       }
 
       await Thought.deleteMany({ _id: { $in: User.Thought } });
-      res.json({ message: 'user and their thoughts deleted!' });
+      res.json({ message: 'user has been deleted!' });
     } catch (err) {
       res.status(500).json(err);
     }

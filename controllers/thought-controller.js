@@ -32,8 +32,8 @@ async createThought(req, res) {
   try {
     const thought = await Thought.create(req.body);
     const user = await User.findOneAndUpdate(
-      { _id: req.body.userId },
-      { $push: { thoughts: _id } },
+       req.body.userId ,
+       { $addToSet: { thoughts: thought._id } },
         { runValidators: true, new: true }
     )
     res.json(user);
@@ -65,18 +65,14 @@ async updateThought(req, res) {
 
 //delete thought
 async deleteThought(req, res) {
-  try {
-      const thought = await Thought.findOneAndUpdate(
-        { username: req.params.username },
-        { $pull: { thought: { thoughtText: req.params.thoughtText } } },
-        { runValidators: true, new: true }
-      );   
-  
-      if (!thought) {
-          return res.status(404).json({ message: `No thought found with this ${username}` });
-      }
+   try {
+    const thought = await Thought.findOneAndDelete({ _id: req.params.thoughtId });
 
-      res.json(thought);
+    if (!thought) {
+        return res.status(404).json({ message: 'No thought found with that ID' });
+    }
+
+      res.json({message: 'Thought has been deleted!!'});
   } catch (err) {
       res.status(500).json(err);
   }
@@ -106,17 +102,17 @@ async createReaction(req, res) {
         //delete reaction 
         async deleteReaction(req, res) {
           try {
-              const reaction = await Thought.findOneAndUpdate(
+              const thought = await Thought.findOneAndUpdate(
                   { _id: req.params.thoughtId},
                   { $pull: { reactionId: req.params.reactionId } },
                   { runValidators: true, new: true }
               );   
           
-              if (!reaction) {
-                  return res.status(404).json({ message: 'user and friend ID has been deleted!' });
+              if (!thought) {
+                  return res.status(404).json({ message: 'user and reaction ID has been deleted!' });
               }
         
-              res.json(reaction);
+              res.json({message: 'User Reaction has been deleted!!'});
           } catch (err) {
               res.status(500).json(err);
           }
