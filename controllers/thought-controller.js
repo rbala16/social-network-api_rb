@@ -81,4 +81,44 @@ async deleteThought(req, res) {
       res.status(500).json(err);
   }
 },
+
+// create reaction
+async createReaction(req, res) {
+  try {
+    const reaction = await Thought.findOneAndUpdate(
+      { _id: req.params.thoughtId },
+                { $addToSet: { reactions: req.body} },
+                { new: true })
+                .populate({path: 'reactions', select: '-__v'})
+                .select('-__v')
+
+                
+                if (!reaction) {
+                  return res.status(404).json({ message: 'No reaction with this id!'});
+              }
+        
+              res.json(reaction);
+          } catch (err) {
+              res.status(500).json(err);
+          }
+        },
+
+        //delete reaction 
+        async deleteReaction(req, res) {
+          try {
+              const reaction = await Thought.findOneAndUpdate(
+                  { _id: req.params.thoughtId},
+                  { $pull: { reactionId: req.params.reactionId } },
+                  { runValidators: true, new: true }
+              );   
+          
+              if (!reaction) {
+                  return res.status(404).json({ message: 'user and friend ID has been deleted!' });
+              }
+        
+              res.json(reaction);
+          } catch (err) {
+              res.status(500).json(err);
+          }
+        },
 }
