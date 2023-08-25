@@ -46,6 +46,7 @@ MIT License
 - npm install
 - [express](https://www.npmjs.com/package/express)
 - [mongoose](https://www.npmjs.com/package/mongoose)
+- [moment](https://www.npmjs.com/package/moment)
 ## Instructions
 💻   
 Run the following command at the terminal:
