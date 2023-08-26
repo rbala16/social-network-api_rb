@@ -101,6 +101,12 @@ The following animation shows the DELETE routes for remove friend being tested i
 
 ![Demo that shows the  DELETE routes for remove friend being tested in Insomnia.](./assets/demo3.jpg)
 
+The following animation shows GET routes to return all users  being tested in MongoDB Compass:
+
+![Demo of GET routes to return all users  being tested in MongoDB Compass](./assets/demo4.jpg)
+
+![Demo of GET routes to return all users  being tested in MongoDB Compass](./assets/demo5.jpg)
+
 In addition to this, your walkthrough video should show the GET,POST, PUT, DELETE routes for thoughts,users and also POST ,DELETE Routes for friends and reaction  being tested in Insomnia.Link is mentioned below:<br>
 https://drive.google.com/file/d/1XR8-a--OWYhc7abfsrOWC1L88RUn9njs/view
 
