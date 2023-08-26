@@ -47,11 +47,36 @@ MIT License
 - [express](https://www.npmjs.com/package/express)
 - [mongoose](https://www.npmjs.com/package/mongoose)
 - [moment](https://www.npmjs.com/package/moment)
+
 ## Instructions
 💻   
 Run the following command at the terminal:
 
-Please watch the Walkthrough viedo for step by step instructions<br>
+`npm start` <br>
+Access API routes with Insomnia, Postman, or other REST API testing client.<br>
+
+### User
+
+- Get all users: GET /api/users
+- Create a user: POST /api/users
+- Get user by ID: GET /api/users/:id
+- Update a user: PUT /api/users/:id
+- Delete a user: DELETE /api/users/:id
+- Add a friend: PUT /api/users/:userId/friends/:friendId
+- Delete a friend: DELETE /api/users/:userId/friends/:friendId
+
+### Thought
+
+Get all thoughts: GET /api/thoughts
+Create a thought: POST /api/thoughts
+Get thought by ID: GET /api/thoughts/:thoughtId
+Update a thought: PUT /api/thoughts/:thoughtId
+Delete a thought: DELETE /api/thoughts/:thoughtId
+
+### Reaction
+
+Add a reaction: PUT /api/thoughts/:thoughtId/reactions
+Delete a reaction: DELETE /api/thoughts/:thoughtId/reactions/:reaCtionId
 
 
 ## Contributing
@@ -64,34 +89,26 @@ Rajni bala : (https://github.com/rbala16)
 
 The following animations show examples of the application's API routes being tested in Insomnia.
 
-The following animation shows GET routes to return all users and all thoughts being tested in Insomnia:
+The following animation shows GET routes to return all users  being tested in Insomnia:
 
-![Demo of GET routes to return all users and all thoughts being tested in Insomnia.](./Assets/18-nosql-homework-demo-01.gif)
+![Demo of GET routes to return all users  being tested in Insomnia.](./assets/demo1.jpg)
 
-The following animation shows GET routes to return a single user and a single thought being tested in Insomnia:
+The following animation shows the  PUT routes for thought being tested in Insomnia:
 
-![Demo that shows GET routes to return a single user and a single thought being tested in Insomnia.](./Assets/18-nosql-homework-demo-02.gif)
+![Demo that shows the PPUT routes for thought being tested in Insomnia.](./assets/demo2.jpg)
 
-The following animation shows the POST, PUT, and DELETE routes for users being tested in Insomnia:
-
-![Demo that shows the POST, PUT, and DELETE routes for users being tested in Insomnia.](./Assets/18-nosql-homework-demo-03.gif)
-
-In addition to this, your walkthrough video should show the POST, PUT, and DELETE routes for thoughts being tested in Insomnia.
-
-The following animation shows the POST and DELETE routes for a user’s friend list being tested in Insomnia:
-
-![Demo that shows the POST and DELETE routes for a user’s friend list being tested in Insomnia.](./Assets/18-nosql-homework-demo-04.gif)
-
-In addition to this, your walkthrough video should show the POST and DELETE routes for reactions to thoughts being tested in Insomnia.
+In addition to this, your walkthrough video should show the GET,POST, PUT, DELETE routes for thoughts,users and also POST ,DELETE Routes for friends and reaction  being tested in Insomnia.Link is mentioned below:<br>
+https://drive.google.com/file/d/1XR8-a--OWYhc7abfsrOWC1L88RUn9njs/view
 
 
 
 
- ## Important Link
+## Important Link
 
 You are required to submit BOTH of the following for review:
 
 * A walkthrough video demonstrating the functionality of the application and all of the acceptance criteria being met.<br>
+https://drive.google.com/file/d/1XR8-a--OWYhc7abfsrOWC1L88RUn9njs/view
 
 * The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.<br>
 https://github.com/rbala16/social-network-api_rb
