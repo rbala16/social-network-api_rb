@@ -106,10 +106,10 @@ async deleteFriend(req, res) {
       );   
   
       if (!user) {
-          return res.status(404).json({ message: 'user and friend ID has been deleted!' });
+          return res.status(404).json({ message: 'Invalid request!' });
       }
 
-      res.json(user);
+      res.json({ message: 'Friend removed!' });
   } catch (err) {
       res.status(500).json(err);
   }
