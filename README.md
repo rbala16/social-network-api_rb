@@ -67,16 +67,16 @@ Access API routes with Insomnia, Postman, or other REST API testing client.<br>
 
 ### Thought
 
-Get all thoughts: GET /api/thoughts
-Create a thought: POST /api/thoughts
-Get thought by ID: GET /api/thoughts/:thoughtId
-Update a thought: PUT /api/thoughts/:thoughtId
-Delete a thought: DELETE /api/thoughts/:thoughtId
+- Get all thoughts: GET /api/thoughts
+- Create a thought: POST /api/thoughts
+- Get thought by ID: GET /api/thoughts/:thoughtId
+-Update a thought: PUT /api/thoughts/:thoughtId
+- Delete a thought: DELETE /api/thoughts/:thoughtId
 
 ### Reaction
 
-Add a reaction: PUT /api/thoughts/:thoughtId/reactions
-Delete a reaction: DELETE /api/thoughts/:thoughtId/reactions/:reaCtionId
+- Add a reaction: PUT /api/thoughts/:thoughtId/reactions
+- Delete a reaction: DELETE /api/thoughts/:thoughtId/reactions/:reaCtionId
 
 
 ## Contributing
@@ -96,6 +96,10 @@ The following animation shows GET routes to return all users  being tested in In
 The following animation shows the  PUT routes for thought being tested in Insomnia:
 
 ![Demo that shows the PPUT routes for thought being tested in Insomnia.](./assets/demo2.jpg)
+
+The following animation shows the DELETE routes for remove friend being tested in Insomnia:
+
+![Demo that shows the  DELETE routes for remove friend being tested in Insomnia.](./assets/demo3.jpg)
 
 In addition to this, your walkthrough video should show the GET,POST, PUT, DELETE routes for thoughts,users and also POST ,DELETE Routes for friends and reaction  being tested in Insomnia.Link is mentioned below:<br>
 https://drive.google.com/file/d/1XR8-a--OWYhc7abfsrOWC1L88RUn9njs/view
